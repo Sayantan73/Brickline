@@ -24,7 +24,7 @@ export default function Header() {
         aria-label="Main navigation"
       >
         <div className="flex flex-col gap-0 md:flex-row md:items-center md:gap-[18px] xl:gap-[4vw]">
-          <a className={navLink} href="#projects" onClick={closeMenu}>Projects <span className="ml-1 text-sm">⌄</span></a>
+          <a className={navLink} href="#projects" onClick={closeMenu}>Projects</a>
           <a className={navLink} href="#highlights" onClick={closeMenu}>Services</a>
           <a className={navLink} href="#about" onClick={closeMenu}>About us</a>
         </div>
@@ -32,7 +32,7 @@ export default function Header() {
           BRICKLINE<span className="text-[#e96d4a]">.</span>
         </a>
         <div className="mt-1 flex flex-col gap-0 md:mt-0 md:flex-row md:items-center md:gap-[18px] xl:gap-[4vw]">
-          <a className={navLink} href="#projects" onClick={closeMenu}>Properties <span className="ml-1 text-sm">⌄</span></a>
+          <a className={navLink} href="#projects" onClick={closeMenu}>Properties</a>
           <a className={navLink} href="#contact" onClick={closeMenu}>Loan</a>
           <a
             className="mt-[25px] inline-flex min-h-12 items-center justify-center bg-[#e96d4a] px-5 text-center text-xs font-semibold uppercase text-white transition hover:-translate-y-0.5 hover:bg-[#d65b39] md:mt-0 md:min-h-0 md:px-[14px] md:py-3 md:text-[10px] xl:px-[22px] xl:py-[14px] xl:text-[11px]"
