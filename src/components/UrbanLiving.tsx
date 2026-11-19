@@ -40,7 +40,12 @@ export default function UrbanLiving() {
               {index === 1 && (
                 <span className="absolute left-4 top-[15px] flex w-[220px] flex-wrap gap-1.5">
                   {['◉ Rent', '$150k', '⌂ Rooms', 'Four', '⌖ Place', 'Arizona'].map((label) => (
-                    <span className="rounded-full border border-white/60 bg-black/40 px-[10px] py-1.5 text-[10px] text-white backdrop-blur-sm" key={label}>{label}</span>
+                    <span
+                      className={`rounded-full border px-[10px] py-1.5 text-[10px] backdrop-blur-sm ${['$150k', 'Four', 'Arizona'].includes(label) ? 'border-white/75 bg-[#FDF8F4]/90 text-[#242522]' : 'border-white/60 bg-black/40 text-white'}`}
+                      key={label}
+                    >
+                      {label}
+                    </span>
                   ))}
                 </span>
               )}

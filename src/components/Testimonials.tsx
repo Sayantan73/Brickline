@@ -7,15 +7,17 @@ const testimonials = [
     name: 'Gregg Bergstrom',
     email: 'bergstrom@gmail.com',
     quote: <>Working with <strong>Brickline</strong> was a fantastic experience from start to finish. They listened to exactly what I wanted, and within a few short weeks, I found my dream home.<br /><br />They went above and beyond to ensure everything went smoothly. Communication was always clear and timely.</>,
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85',
-    home: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85',
+    photo: '/testimonial/gregg.jpg',
+    feature: '/testimonial/gregg-feature.jpg',
+    home: '/testimonial/gregg-home-secondary.jpg',
   },
   {
     name: 'Olivia Martin',
     email: 'olivia.martin@email.com',
     quote: <>From our first conversation, Brickline made the entire process feel effortless. They understood what mattered to us and found a home that felt right from the moment we walked in.<br /><br />Thoughtful, responsive, and genuinely invested in helping us find our place.</>,
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=85',
-    home: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85',
+    photo: '/testimonial/olivia.jpg',
+    feature: '/testimonial/olivia-feature.jpg',
+    home: '/testimonial/olivia-home.jpg',
   },
 ]
 
@@ -43,7 +45,7 @@ export default function Testimonials() {
       </div>
       <div className="mt-6 flex flex-col gap-5 md:grid md:min-h-[430px] md:grid-cols-[.9fr_1.2fr] md:items-center md:gap-[30px] md:mt-7 xl:grid-cols-[.85fr_1.35fr_.8fr] xl:gap-[42px]">
         <div className="contents md:flex md:flex-col md:justify-center">
-          <img className="order-1 h-[260px] w-full object-cover md:order-none md:h-[300px]" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85" alt="Contemporary Brickline residence" />
+          <img className="order-1 h-[260px] w-full object-cover object-center md:order-none md:h-[300px]" src={testimonial.feature} alt={`Contemporary residence for ${testimonial.name}`} />
           <div className="order-2 -mt-1.5 flex items-center gap-3 md:order-none md:mt-[15px]">
             <img className="size-[42px] rounded-full object-cover" src={testimonial.photo} alt="" />
             <div className="flex flex-col gap-[3px]">
@@ -57,11 +59,11 @@ export default function Testimonials() {
             {testimonial.quote}
           </blockquote>
           <div className="mt-5 flex items-center gap-5 md:mt-8">
-            <ArrowButton direction="previous" onClick={() => changeTestimonial(-1)} label="Previous testimonial" className="size-[34px] border-[#d2d3cf] text-[#242522] hover:border-[#e96d4a] hover:bg-[#e96d4a] hover:text-white" />
+            <ArrowButton direction="previous" onClick={() => changeTestimonial(-1)} label="Previous testimonial" className="size-[34px] border-[#d2d3cf] text-[#242522]" />
             <span className="relative block h-px flex-1 overflow-hidden bg-[#dededb]">
               <span className="block h-0.5 bg-[#686a66] transition-transform duration-300" style={{ width: `${100 / testimonials.length}%`, transform: `translateX(${active * 100}%)` }} />
             </span>
-            <ArrowButton onClick={() => changeTestimonial(1)} label="Next testimonial" className="size-[34px] border-[#d2d3cf] text-[#242522] hover:border-[#e96d4a] hover:bg-[#e96d4a] hover:text-white" />
+            <ArrowButton onClick={() => changeTestimonial(1)} label="Next testimonial" className="size-[34px] border-[#d2d3cf] text-[#242522]" />
           </div>
         </div>
         <img className="order-4 -mr-[18px] mb-[-53px] h-[170px] w-[65%] self-end object-cover md:hidden" src={testimonial.home} alt="A home from the Brickline collection" />

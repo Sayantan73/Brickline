@@ -37,7 +37,7 @@ export default function Spotlight() {
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/50 via-black/15 to-black/20" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-      <span className="absolute left-5 top-[38%] inline-flex rounded-full border border-white/50 px-[13px] py-[7px] text-[11px] leading-none md:left-[4.2%] md:top-[45%]">Property spotlight</span>
+      <span className="absolute left-5 top-[34%] inline-flex rounded-full border border-white/50 px-[13px] py-[7px] text-[11px] leading-none md:left-[4.2%] md:top-[35%]">Property spotlight</span>
       <div className="absolute right-5 top-5 grid grid-cols-[auto_1fr] items-center gap-x-2 rounded-full border border-white/40 bg-black/15 px-[13px] py-[9px] text-[9px] md:right-[4.2%] md:top-[42px] md:text-[11px]">
         <Icon name="pin" className="size-[14px]" />
         <span>{spotlight.place}</span>
@@ -53,7 +53,7 @@ export default function Spotlight() {
         </a>
         <div className="ml-auto flex gap-2.5">
           <ArrowButton direction="previous" onClick={() => changeSlide(-1)} label="Previous property" className="size-[42px] md:size-[54px]" />
-          <ArrowButton onClick={() => changeSlide(1)} label="Next property" className="size-[42px] border-[#e96d4a] bg-[#e96d4a] text-white hover:border-white hover:bg-white md:size-[54px]" />
+          <ArrowButton onClick={() => changeSlide(1)} label="Next property" className="size-[42px] !border-[#E85429] !bg-[#E85429] text-white hover:!border-white hover:!bg-white md:size-[54px]" />
         </div>
       </div>
     </section>

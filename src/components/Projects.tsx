@@ -44,12 +44,12 @@ export default function Projects() {
   }, [])
 
   return (
-    <section className={`${sectionWidth} pt-[110px] md:pt-[102px] xl:pt-[114px]`} id="projects">
-      <div className="md:flex md:items-end md:justify-between md:gap-7 xl:gap-[60px]">
-        <h2 className="font-sans text-[clamp(38px,10.5vw,52px)] font-medium leading-[1.03] tracking-[-.055em] md:flex-1 md:text-[clamp(40px,5vw,68px)]">
+    <section className={`${sectionWidth} pt-[110px] md:pt-[102px] xl:pt-[84px]`} id="projects">
+      <div className="md:flex md:items-end md:justify-between md:gap-7 xl:relative xl:gap-[60px]">
+        <h2 className="font-sans text-[clamp(38px,10.5vw,52px)] font-medium leading-[1.03] tracking-[-.055em] md:flex-1 md:text-[clamp(40px,5vw,68px)] xl:w-[58%] xl:flex-none">
           Executed &amp; in-progress<br />projects <span className="text-[#bdbfba]">–</span>
         </h2>
-        <div className="pt-[23px] md:w-[45%] md:pb-[3px] md:pt-0">
+        <div className="pt-[23px] md:w-[37%] md:pb-[3px] md:pt-0 xl:absolute xl:right-0 xl:top-full xl:w-[37%] xl:translate-y-[10px]">
           <p className="mb-[18px] text-[13px] leading-relaxed md:mb-7 md:text-sm">
             Designed with innovation, built in prime locations, and rooted in sustainability—our projects redefine modern living with comfort and elegance.
           </p>
@@ -65,20 +65,20 @@ export default function Projects() {
           </a>
         </div>
       </div>
-      <div className="mt-6 flex gap-4 overflow-hidden md:mt-[38px] md:grid md:grid-cols-[1.2fr_1fr] md:gap-5 xl:grid-cols-[1.6fr_.8fr_.8fr] xl:gap-7">
+      <div className="mt-6 flex gap-4 overflow-hidden md:mt-[38px] md:grid md:grid-cols-[1.2fr_1fr] md:gap-5 xl:mt-[10px] xl:grid-cols-[1.6fr_.8fr_.8fr] xl:gap-7">
         {visible.map((project, index) => (
-          <article className={`min-w-0 flex-[0_0_82%] md:flex-none ${index === 0 ? 'md:col-span-1' : ''} ${index === 2 ? 'md:hidden xl:block' : ''}`} key={project.name}>
+          <article className={`min-w-0 flex-[0_0_82%] md:flex-none ${index === 0 ? 'md:col-span-1' : 'xl:mt-[180px]'} ${index === 2 ? 'md:hidden xl:block' : ''}`} key={project.name}>
             <a className={`group relative block h-[250px] overflow-hidden bg-[#eee9e4] md:h-[250px] ${index === 0 ? 'md:h-[320px] xl:h-[390px]' : 'xl:h-[290px]'}`} href="#contact" aria-label={`Learn about ${project.name}`}>
               <img className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]" src={project.image} alt={`${project.name} contemporary residence`} />
               <span className="absolute bottom-3.5 right-3.5 grid size-[38px] translate-y-2 place-items-center rounded-full bg-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <Icon name="arrow" className="size-4" />
               </span>
             </a>
-            <div className="mt-3.5 flex flex-wrap items-baseline justify-between gap-2">
+            <div className="mt-3.5 flex min-h-[3.2rem] flex-wrap items-baseline justify-between gap-2 md:min-h-0 xl:min-h-[4.25rem]">
               <h3 className="text-lg font-medium tracking-[-.04em] xl:text-xl">{project.name}</h3>
               <span className="whitespace-nowrap text-[10px] text-[#676965] md:text-xs">{project.location}</span>
             </div>
-            <p className={`mt-1.5 max-w-[490px] text-xs leading-relaxed text-[#686a66] ${index !== 0 ? 'xl:max-w-[320px] xl:text-xs' : 'md:text-[13px]'}`}>{project.description}</p>
+            <p className={`mt-1.5 min-h-[5rem] max-w-[490px] text-xs leading-relaxed text-[#686a66] md:min-h-[2.65rem] xl:min-h-[5rem] ${index !== 0 ? 'xl:max-w-[320px] xl:text-xs' : 'md:text-[13px]'}`}>{project.description}</p>
           </article>
         ))}
       </div>
